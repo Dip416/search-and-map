@@ -39,12 +39,12 @@ const SortFilter = () => {
       <div className="w-[180px] ml-auto xs:w-[220px]">
         <ReactSelect
           options={SORT_OPTIONS}
-          getOptionLabel={(opt) => opt?.label}
-          getOptionValue={(opt) =>
+          getOptionLabel={(opt: any) => opt?.label}
+          getOptionValue={(opt: any) =>
             `${opt?.value?.sortField}-${opt?.value?.sortOrder}`
           }
           value={SORT_OPTIONS?.find(
-            (opt) =>
+            (opt: any) =>
               opt?.value?.sortField === sortValues?.sortField &&
               opt?.value?.sortOrder === sortValues?.sortOrder,
           )}
