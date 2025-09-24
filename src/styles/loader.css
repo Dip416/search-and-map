@@ -1,0 +1,25 @@
+.loader {
+  @apply relative w-[130px] h-[4px] rounded-full bg-black/20 overflow-hidden;
+}
+
+.loader::before {
+  content: "";
+  @apply absolute top-0 left-0 h-full rounded-full bg-primary;
+  width: 0%;
+  animation: loaderMove 1s ease-in-out infinite;
+}
+
+@keyframes loaderMove {
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
