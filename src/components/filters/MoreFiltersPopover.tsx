@@ -74,7 +74,7 @@ export default function MoreFiltersPopover({
 
         {/* Area */}
         <div className="mb-3">
-          <Label className="block font-semibold">Area</Label>
+          <span className="block mb-1 font-semibold">Area</span>
           <ReactSelect
             options={areaOptions || []}
             value={areaOptions.filter((opt: any) =>
@@ -97,9 +97,9 @@ export default function MoreFiltersPopover({
 
         {/* Builder */}
         <div className="mb-3">
-          <Label className="block font-semibold">
+          <span className="block mb-1 font-semibold">
             Builder <span className="font-normal">Group</span>
-          </Label>
+          </span>
           <ReactSelect
             options={groupNamesOptions || []}
             value={groupNamesOptions.find(
@@ -120,9 +120,9 @@ export default function MoreFiltersPopover({
           />
         </div>
         <div className="mb-3 md:hidden">
-          <Label className="block font-semibold">
+          <span className="block mb-1 font-semibold">
             Property <span className="font-normal">Type</span>
-          </Label>
+          </span>
           <ReactSelect
             options={categoryOptions || []}
             value={categoryOptions.filter((opt: any) =>
@@ -142,9 +142,9 @@ export default function MoreFiltersPopover({
           />
         </div>
         <div className="mb-3 md:hidden">
-          <Label className="block font-semibold">
+          <span className="block mb-1 font-semibold">
             Property <span className="font-normal">Status</span>
-          </Label>
+          </span>
           <ReactSelect
             options={PROPERTY_STATUS_OPTIONS}
             value={PROPERTY_STATUS_OPTIONS.find(
@@ -266,7 +266,7 @@ export default function MoreFiltersPopover({
           <p className="block font-semibold mb-2">Super Built Up Area (sqft)</p>
           <div className="flex space-x-2">
             <div className="w-1/2">
-              <Label className="block font-semibold text-sm">Min</Label>
+              <span className="block mb-1 font-semibold text-sm">Min</span>
               <ReactSelect
                 options={AREAS_SQFT_OPTIONS || []}
                 value={AREAS_SQFT_OPTIONS.find(
@@ -287,7 +287,7 @@ export default function MoreFiltersPopover({
               />
             </div>
             <div className="w-1/2">
-              <Label className="block font-semibold text-sm">Max</Label>
+              <span className="block mb-1 font-semibold text-sm">Max</span>
               <ReactSelect
                 options={AREAS_SQFT_OPTIONS || []}
                 value={AREAS_SQFT_OPTIONS.find(

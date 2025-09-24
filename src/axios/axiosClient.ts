@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const AXIOS = axios.create({
-  baseURL: "https://api.savitarrealty.com/api/v1",
+  baseURL: "/api",
   headers: { "Content-Type": "application/json" },
 });
 

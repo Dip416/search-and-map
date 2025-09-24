@@ -97,7 +97,16 @@ export default function FilterBar() {
             variant="outline"
             className="w-[160px] text-[#808080] font-normal"
           >
-            Price
+            {(filterValues?.minPrice === 1000000 &&
+              filterValues?.maxPrice === 50000000) ||
+            !(filterValues?.minPrice && filterValues?.maxPrice) ? (
+              "Price"
+            ) : (
+              <span className="text-black font-semibold">
+                {(filterValues?.minPrice / 100000).toFixed(2)} L -{" "}
+                {(filterValues?.maxPrice / 10000000).toFixed(2)} Cr
+              </span>
+            )}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-[300px]">
